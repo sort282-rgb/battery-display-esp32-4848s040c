@@ -1,0 +1,31 @@
+name: Build firmware
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  firmware:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install PlatformIO
+        run: pip install platformio==6.1.18
+      - name: Build ESP32-4848S040C-I firmware
+        run: pio run -e esp32-4848s040c
+      - name: Package and validate web-installer files
+        run: python scripts/package_release.py
+      - name: Upload firmware artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: battery-display-480x480-${{ github.sha }}
+          path: |
+            installer/firmware/*.bin
+            installer/firmware/SHA256SUMS
+            installer/manifest-*.json
+            installer/index.html
+            index.html

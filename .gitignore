@@ -1,0 +1,7 @@
+.pio/
+.tmp*
+*.o
+include/local_config.h
+.vscode/
+.idea/
+Thumbs.db
