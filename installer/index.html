@@ -126,7 +126,7 @@
 
   let savedLanguage = "";
   try { savedLanguage = localStorage.getItem("battery-display-language") || ""; } catch (_) {}
-  const initialLanguage = savedLanguage || ((navigator.language || "en").toLowerCase().startsWith("ru") ? "ru" : "en");
+  const initialLanguage = savedLanguage || "en";
   languageButtons.forEach(button => button.addEventListener("click", () => applyLanguage(button.dataset.language)));
   applyLanguage(initialLanguage);
 
