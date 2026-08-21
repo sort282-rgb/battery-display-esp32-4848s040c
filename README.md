@@ -18,6 +18,24 @@ A 4-inch touch dashboard for the [Battery Emulator](https://github.com/dalathegr
 - Phone-based setup, screen orientation and connection diagnostics
 - Update and factory web-installer flows
 
+## Screen gallery
+
+| Main dashboard | Cell monitor |
+| --- | --- |
+| ![Main Battery Display dashboard](docs/images/main-screen.png) | ![96-cell voltage monitor](docs/images/cell-monitor.png) |
+
+| Display menu | Battery information |
+| --- | --- |
+| ![Display Menu](docs/images/display-menu.png) | ![Battery information and contactor status](docs/images/battery-info.png) |
+
+| Events | DTC and faults |
+| --- | --- |
+| ![Events list](docs/images/events.png) | ![DTC and fault controls](docs/images/dtc-faults.png) |
+
+| System information |
+| --- |
+| ![System information and connection status](docs/images/system.png) |
+
 ## Hardware
 
 - ESP32-4848S040C-I / Guition 4-inch board
